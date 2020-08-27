@@ -20,8 +20,6 @@ public class Invoice {
     private Long invoiceNumber;
     @ManyToOne
     private Client client;
-//    @DateTimeFormat
-    @Future
     private LocalDate paymentDate;
     @Positive
     private double amount;

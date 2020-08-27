@@ -58,6 +58,7 @@ public class TaskController {
 
     @GetMapping("/add")
     public String addTaskForm(Model model){
+        model.addAttribute("tasks", taskDictService.findTask());
         model.addAttribute("task", new Task());
         return "/task/form";
     }
@@ -74,6 +75,7 @@ public class TaskController {
 
     @GetMapping("/edit/{id}")
     public String editTask(@PathVariable Long id, Model model){
+        model.addAttribute("tasks", taskDictService.findTask());
         model.addAttribute("task", service.findTaskById(id));
         return "task/form";
     }

@@ -6,7 +6,7 @@
 </head>
 <body>
 <h4>Czy na pewno chcesz usunąć zadanie?</h4>
-<a href='<c:url value="/tasks/remove/${task.getId()}"/>'>TAK, USUŃ</a>
+<a href='<c:url value="/tasks/remove/${tasks.getId()}"/>'>TAK, USUŃ</a>
 <a href='<c:url value="/tasks"/>'>NIE, COFNIJ</a>
 </body>
 </html>
