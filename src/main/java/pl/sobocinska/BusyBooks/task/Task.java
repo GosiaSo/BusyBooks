@@ -1,8 +1,8 @@
 package pl.sobocinska.BusyBooks.task;
 
 import pl.sobocinska.BusyBooks.clients.Client;
-import pl.sobocinska.BusyBooks.dictionary.StatusTaskDictionary;
-import pl.sobocinska.BusyBooks.dictionary.TasksDictionary;
+import pl.sobocinska.BusyBooks.statusTask.StatusTaskDictionary;
+import pl.sobocinska.BusyBooks.taskDictionary.TasksDictionary;
 
 import javax.persistence.*;
 

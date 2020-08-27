@@ -18,10 +18,10 @@ public class Client {
     private String name;
     @ManyToOne
     private User user;
-    @NIP
-    private long NIP;
-    @REGON
-    private String REGON;
+//    @NIP
+    private long nip;
+//    @REGON
+    private String regon;
     @Length(min = 5, max = 100)
     private String adress;
     @Email
@@ -54,20 +54,20 @@ public class Client {
         this.user = user;
     }
 
-    public long getNIP() {
-        return NIP;
+    public long getNip() {
+        return nip;
     }
 
-    public void setNIP(long NIP) {
-        this.NIP = NIP;
+    public void setNip(long nip) {
+        this.nip = nip;
     }
 
-    public String getREGON() {
-        return REGON;
+    public String getRegon() {
+        return regon;
     }
 
-    public void setREGON(String REGON) {
-        this.REGON = REGON;
+    public void setRegon(String regon) {
+        this.regon = regon;
     }
 
     public String getAdress() {
@@ -85,4 +85,5 @@ public class Client {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }

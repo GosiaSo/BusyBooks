@@ -1,16 +1,17 @@
-package pl.sobocinska.BusyBooks.dictionary;
+package pl.sobocinska.BusyBooks.statusInvoice;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "statusTasksDictionary")
-public class StatusTaskDictionary {
+@Table(name = "statusInvoiceDictionary")
+public class StatusInvoiceDictionary {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String description;
 
-    public StatusTaskDictionary() {
+    public StatusInvoiceDictionary() {
     }
 
     public Long getId() {

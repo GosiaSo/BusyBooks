@@ -2,7 +2,7 @@ package pl.sobocinska.BusyBooks.users;
 
 import java.util.List;
 
-public interface userService {
+public interface UserService {
 
     List<User> findUsers();
     User findUserById(Long id);

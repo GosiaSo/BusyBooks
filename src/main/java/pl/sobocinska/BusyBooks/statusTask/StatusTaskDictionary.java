@@ -1,17 +1,16 @@
-package pl.sobocinska.BusyBooks.dictionary;
+package pl.sobocinska.BusyBooks.statusTask;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tasksDictionary")
-public class TasksDictionary {
-
+@Table(name = "statusTasksDictionary")
+public class StatusTaskDictionary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String description;
 
-    public TasksDictionary() {
+    public StatusTaskDictionary() {
     }
 
     public Long getId() {

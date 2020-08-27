@@ -1,12 +1,11 @@
 package pl.sobocinska.BusyBooks.invoices;
 
-import org.springframework.format.annotation.DateTimeFormat;
 import pl.sobocinska.BusyBooks.clients.Client;
-import pl.sobocinska.BusyBooks.dictionary.StatusInvoiceDictionary;
+import pl.sobocinska.BusyBooks.statusInvoice.StatusInvoiceDictionary;
 
 import javax.persistence.*;
 import javax.validation.constraints.Future;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.time.LocalDate;
 
@@ -17,11 +16,11 @@ public class Invoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank
+    @NotNull
     private Long invoiceNumber;
     @ManyToOne
     private Client client;
-    @DateTimeFormat
+//    @DateTimeFormat
     @Future
     private LocalDate paymentDate;
     @Positive

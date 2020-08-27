@@ -1,20 +1,18 @@
 package pl.sobocinska.BusyBooks.users;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Repository
-@Primary
+@Service
 @Transactional
-public class JpaUserService implements userService{
-    private final userRepository userRepository;
+public class JpaUserService implements UserService {
+    private final UserRepository userRepository;
 
     @Autowired
-    public JpaUserService(pl.sobocinska.BusyBooks.users.userRepository userRepository) {
+    public JpaUserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

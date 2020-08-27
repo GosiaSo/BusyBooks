@@ -12,6 +12,10 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Length(min = 3, max = 15)
+    private String name;
+    @Length(min = 5, max = 20)
+    private String surname;
     @Length(min = 5, max = 15)
     private String login;
     @NotBlank
@@ -42,5 +46,21 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 }
