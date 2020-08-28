@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -109,7 +110,16 @@
                         <span class="text">ZADANIA</span>
                     </a>
 
+<%--                    czy jestem zalogowana--%>
+                    <sec:authorize access="isAuthenticated()">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Witaj zalogowany</span>
+                        <sec:csrfInput/>
+                    </sec:authorize>
 
+                    <sec:authorize access="!isAuthenticated()">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Zaloguj sie</span>
+                        <sec:csrfInput/>
+                    </sec:authorize>
                 </div>
 
                 <!-- Content Row -->
