@@ -5,6 +5,8 @@
     <title>Zadania</title>
 </head>
 <body>
+<a href="<c:url value="/"/>">WRÓĆ</a>
+<br>
 <a href="<c:url value="/tasks/add"/>">Dodaj nowe zadanie</a>
 <p><c:out value="${message}"/></p>
 <table>

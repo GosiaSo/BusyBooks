@@ -5,6 +5,8 @@
     <title>Użytkownicy</title>
 </head>
 <body>
+<a href="<c:url value="/"/>">WRÓĆ</a>
+<br>
 <a href="<c:url value="/admin/users/add"/>">Dodaj nowego użytkownika</a>
 <p><c:out value="${message}"/></p>
 <table>

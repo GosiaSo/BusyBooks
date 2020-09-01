@@ -5,6 +5,8 @@
     <title>Kontrahenci</title>
 </head>
 <body>
+<a href="<c:url value="/"/>">WRÓĆ</a>
+<br>
 <a href="<c:url value="/clients/add"/>">Dodaj nowego kontrahenta</a>
 <p><c:out value="${message}"/></p>
 <table>

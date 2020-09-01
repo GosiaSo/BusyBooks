@@ -5,6 +5,8 @@
     <title>Faktury</title>
 </head>
 <body>
+<a href="<c:url value="/"/>">WRÓĆ</a>
+<br>
 <a href="<c:url value="/invoices/add"/>">Dodaj nową fakturę</a>
 <p><c:out value="${message}"/></p>
 

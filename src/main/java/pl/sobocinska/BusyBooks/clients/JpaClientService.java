@@ -40,4 +40,8 @@ public class JpaClientService implements ClientService{
     public void deleteClient(Long id) {
         clientRepository.delete(clientRepository.getOne(id));
     }
+
+    public List<Client> showClientsNull(){
+        return clientRepository.findAllByUserIsNull();
+    }
 }
