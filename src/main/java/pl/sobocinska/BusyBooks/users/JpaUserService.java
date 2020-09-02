@@ -1,6 +1,7 @@
 package pl.sobocinska.BusyBooks.users;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,10 +11,12 @@ import java.util.List;
 @Transactional
 public class JpaUserService implements UserService {
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public JpaUserService(UserRepository userRepository) {
+    public JpaUserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
 
@@ -29,6 +32,8 @@ public class JpaUserService implements UserService {
 
     @Override
     public void createUser(User user) {
+        String encdodedPswd = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encdodedPswd);
         userRepository.save(user);
     }
 

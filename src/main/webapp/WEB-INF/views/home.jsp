@@ -46,7 +46,7 @@
                             <a class="nav-link" href="<c:url value="/logout"/>">
                                 <img class="img-profile rounded-circle" src="<c:url value="/img/icon.png"/>">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Witaj <sec:authentication
-                                        property="principal.name"/> !</span>
+                                        property="principal.username"/> !</span>
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Wyloguj się</span>
                             </a></li>
                     </sec:authorize>
@@ -54,7 +54,7 @@
                     <sec:authorize access="!isAuthenticated()">
                         <li>
                             <a class="nav-link"
-                               href="<c:url value="http://localhost:8180/auth/realms/BusyBook/protocol/openid-connect/auth?response_type=code&client_id=busybooks-client"/>">
+                               href="<c:url value="/login"/>">
                                 <img class="img-profile rounded-circle" src="<c:url value="/img/icon.png"/>">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Zaloguj się</span>
                             </a></li>

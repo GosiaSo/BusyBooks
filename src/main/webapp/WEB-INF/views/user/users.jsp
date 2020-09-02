@@ -20,7 +20,7 @@
         <tr>
             <td><c:out value="${user.name}"/></td>
             <td><c:out value="${user.surname}"/></td>
-            <td><c:out value="${user.login}"/></td>
+            <td><c:out value="${user.username}"/></td>
             <td> <a href='<c:url value="/users/edit/${user.getId()}"/>'>Edytuj użytkownika </a> </td>
             <td> <a href='<c:url value="/users/confirm/${user.getId()}"/>'>Usuń użytkownika</a> </td>
         </tr>
